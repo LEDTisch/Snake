@@ -1,7 +1,11 @@
 #include <Arduino.h>
+#include "LED-Tisch.h"
+
+LEDTisch ledtisch=LEDTisch(10,15,1);
+
 
 void setup() {
-  // put your setup code here, to run once:
+    ledtisch.init(10);
 }
 
 void loop() {
