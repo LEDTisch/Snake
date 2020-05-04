@@ -19,7 +19,7 @@ void Snake::draw(){
         ledtisch.setcolor(255-l*50,l*50,0);
         ledtisch.drawkoordinatensystem(this->snake[l][0],this->snake[l][1]);
     }
-    
+
     ledtisch.show();
 }
 
@@ -46,29 +46,38 @@ void Snake::addPixel(){
 
 
 void Snake::move(){
-
-
-switch(direction){
-    case 0://rechts
-        moveRight();
-    break;
-    case 1://links
-        moveLeft();
-    break; 
-    case 2://oben
-        moveTop();
-    break;
-    case 3://unten
-        moveDown();
-    break;
-
-}
-
+ledtisch.drawkoordinatensystem(snake[length-1][0],snake[length-1][1],0x000000);
         snake[2][0]=snake[1][0];
                 snake[2][1]=snake[1][1];
 
     snake[1][0]=snake[0][0];
         snake[1][1]=snake[0][1];
+
+switch(direction){
+    case 0://rechts
+                direction=0;
+
+snake[0][0] += 1;
+    break;
+    case 1://links
+            direction=1;
+
+    snake[0][0] += -1;
+    break; 
+    case 2://oben
+            direction=2;
+    
+snake[0][1] +=1;
+    break;
+    case 3://unten
+
+
+    snake[0][1] += -1;
+    break;
+
+}
+
+
 
 
 }
@@ -76,42 +85,23 @@ switch(direction){
 
 void Snake::moveDown(){
 
-            direction=3;
-           ledtisch.drawkoordinatensystem(snake[length-1][0],snake[length-1][1],0x000011);
 
-
-Serial.println(snake[length-1][0]);Serial.println(snake[length-1][1]);
-
-    snake[0][1] += -1;
 
 }
 void Snake::moveTop(){
-    direction=2;
-        ledtisch.drawkoordinatensystem(snake[length-1][0],snake[length-1][1],0x000011);
-        Serial.println(snake[length-1][0]);Serial.println(snake[length-1][1]);
 
-snake[0][1] +=1;
 
 }
 void Snake::moveLeft(){
 
 
-    direction=1;
-            ledtisch.drawkoordinatensystem(snake[length-1][0],snake[length-1][1],0x000011);
-            Serial.println(snake[length-1][0]);Serial.println(snake[length-1][1]);
 
-
-    snake[0][0] += -1;
 
 }
 void Snake::moveRight(){
 
 
-        direction=0;
-        ledtisch.drawkoordinatensystem(snake[length-1][0],snake[length-1][1],0x000011);
-        Serial.println(snake[length-1][0]);Serial.println(snake[length-1][1]);
 
-snake[0][0] += 1;
 
 }
 
