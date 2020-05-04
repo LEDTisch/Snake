@@ -9,9 +9,12 @@ void setup() {
     ledtisch.clear();
     ledtisch.setcolor(255,0,0);
     ledtisch.drawkoordinatensystem(5,5);
-    ledtisch.show();
+    ledtisch.show();   
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+
+
+
 }
