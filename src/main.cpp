@@ -6,12 +6,16 @@ Snake snake=Snake();
 
 
 void setup() {
-Serial.begin(9600);
-snake.init(10);
-
-
+    ledtisch.init(10);
+    ledtisch.clear();
+    ledtisch.setcolor(255,0,0);
+    ledtisch.drawkoordinatensystem(5,5);
+    ledtisch.show();
 }
 
 void loop() {
-snake.draw();
+
+
+
+
 }
