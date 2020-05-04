@@ -13,13 +13,7 @@ void setup() {
 }
 
 void loop() {
-<<<<<<< HEAD
-
 
 
 
 }
-=======
-  // put your main code here, to run repeatedly:
-}
->>>>>>> parent of 4023f0a... dfsx
