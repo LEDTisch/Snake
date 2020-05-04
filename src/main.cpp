@@ -1,8 +1,7 @@
 #include <Arduino.h>
-#include "Snake.h"
+#include "LED-Tisch.h"
 
-Snake snake=Snake();
-
+LEDTisch ledtisch=LEDTisch(10,15,1);
 
 
 void setup() {
@@ -14,8 +13,13 @@ void setup() {
 }
 
 void loop() {
+<<<<<<< HEAD
 
 
 
 
 }
+=======
+  // put your main code here, to run repeatedly:
+}
+>>>>>>> parent of 4023f0a... dfsx
