@@ -1,7 +1,8 @@
 #include <Arduino.h>
-#include "LED-Tisch.h"
+#include "Snake.h"
 
-LEDTisch ledtisch=LEDTisch(10,15,1);
+Snake snake=Snake();
+
 
 
 void setup() {
