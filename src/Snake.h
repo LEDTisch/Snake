@@ -3,11 +3,12 @@
 
 class Snake{
     private:
-        int length=3;
+        int length=1;
         int arraySizeX=10;
         int arraySizeY=15;
-        int snake[10][15][2];
-        
+        //int snake[10][15][2];
+        int snake[15*10][2];
+
         void moveSnake();
 
     
