@@ -1,17 +1,17 @@
 #include <Arduino.h>
-#include "LED-Tisch.h"
+#include "Snake.h"
 
-LEDTisch ledtisch=LEDTisch(10,15,1);
+Snake snake=Snake();
+
 
 
 void setup() {
-    ledtisch.init(10);
-    ledtisch.clear();
-    ledtisch.setcolor(255,0,0);
-    ledtisch.drawkoordinatensystem(5,5);
-    ledtisch.show();
+Serial.begin(9600);
+snake.init(10);
+
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+snake.draw();
 }
