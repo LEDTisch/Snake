@@ -3,7 +3,7 @@
 
 class Snake{
     private:
-        int length=1;
+        int length=3;
         int arraySizeX=10;
         int arraySizeY=15;
         //int snake[10][15][2];

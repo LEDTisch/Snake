@@ -32,19 +32,19 @@ if(bb[0]=='h'){
 if(bb[0]=='s'){
 blue=bb[1];
 if(blue=='4'){//drehen
-snake.moveTop();
+snake.direction=2;
 }
 
 if(blue=='2'){//rechts
-snake.moveRight();
+snake.direction=0;
 }
 
 if(blue=='0'){//links
- snake.moveLeft();
+ snake.direction=1;
 }
 
 if(blue=='7'){//runter
-snake.moveDown();
+snake.direction=3;
 }
 
 if(blue=='1'){//neuesspiel
@@ -61,9 +61,10 @@ long takt=millis();
 void loop() {
 if(millis()>takt){
     snake.move();
-    takt=millis()+500;
+            snake.draw();
+
+    takt=millis()+1000;
 }
-        snake.draw();
 
         steuerung();
 
