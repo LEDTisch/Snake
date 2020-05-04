@@ -9,6 +9,8 @@ Snake::Snake(){
 void Snake::init(int _pin){
     ledtisch.init(_pin);
     ledtisch.clear();
+    ledtisch.setcolor(255,0,0);
+    ledtisch.drawkoordinatensystem(5,5);
     ledtisch.show();
 }
 void Snake::draw(){
