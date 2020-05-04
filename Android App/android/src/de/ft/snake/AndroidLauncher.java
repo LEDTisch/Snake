@@ -11,11 +11,9 @@ public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Intent i = new Intent("android.intent.action.ACTION_REQUEST_SHUTDOWN");
-		i.putExtra("android.intent.extra.KEY_CONFIRM", true);
-		startActivity(i);
+		
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		initialize(new MainGame(), config);
-		while (true);
+
 	}
 }
