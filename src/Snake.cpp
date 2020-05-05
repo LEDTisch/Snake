@@ -81,28 +81,3 @@ snake[0][1] +=1;
 
 
 }
-
-
-void Snake::moveDown(){
-
-
-
-}
-void Snake::moveTop(){
-
-
-}
-void Snake::moveLeft(){
-
-
-
-
-}
-void Snake::moveRight(){
-
-
-
-
-}
-
-
