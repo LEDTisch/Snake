@@ -68,16 +68,17 @@ snake.createSnake(5,7);
 long schritt=0;
 long takt=millis();
 long verlauf=0;
+int u=5;
 void loop() {
 if(millis()>takt){
-        if(schritt>255){
+        if(schritt>255/u){
     snake.move();
     if(snake.WandKontrolle()!=-1 || snake.SnakeKontrolle()!=-1){
             GameOver();
     }
     schritt=0;
 }
-            snake.draw(schritt);
+            snake.draw(schritt,u);
 
 
         if(verlauf>=254){
@@ -85,7 +86,7 @@ if(millis()>takt){
         }
         schritt++;
         verlauf++;
-    takt=millis()+0;
+    takt=millis()+10;
 }
 
         steuerung();

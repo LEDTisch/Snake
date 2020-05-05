@@ -26,7 +26,7 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
 
     Snake();
     void init(int _pin);
-    void draw(long verlauf);
+    void draw(long verlauf,int u);
     void createSnake(int x,int y);
     void move();
     void addPixel();
