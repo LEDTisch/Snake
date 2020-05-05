@@ -2,6 +2,7 @@
 #include "Snake.h"
 
 Snake snake=Snake();
+
 char blue;
 
 void setup() {
