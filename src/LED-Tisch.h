@@ -1,7 +1,7 @@
 #include "Arduino.h"
 
-#ifndef AIRCRAFT_H
-#define AIRCRAFT_H
+#ifndef LEDTisch_H
+#define LEDTisch_H
 
 
 #include <Adafruit_NeoPixel.h>
