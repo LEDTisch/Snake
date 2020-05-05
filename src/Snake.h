@@ -1,6 +1,7 @@
 #include <Arduino.h>
-#include "LED-Tisch.h"
 
+
+#include "Var.h"
 class Snake{
     private:
         int length=6;
@@ -14,7 +15,6 @@ class Snake{
     
 
     public:
-LEDTisch ledtisch=LEDTisch(10,15,1);
 
     int direction=0;
     /*
