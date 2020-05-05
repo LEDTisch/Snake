@@ -1,1 +1,2 @@
 # Snake
+Das Neopixel Snake
