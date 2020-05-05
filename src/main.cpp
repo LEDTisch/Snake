@@ -1,8 +1,6 @@
 #include <Arduino.h>
 #include "Snake.h"
 
-#include "Var.h"
-
 Snake snake=Snake();
 char blue;
 
@@ -61,7 +59,7 @@ if(blue=='1'){//neuesspiel
 
 
 void GameOver(){
-        ledtisch.clear();
+        snake.ledtisch.clear();
 snake.createSnake(5,7);
 
 }
