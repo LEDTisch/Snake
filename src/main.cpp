@@ -70,7 +70,7 @@ long takt=millis();
 void loop() {
 if(millis()>takt){
     snake.move();
-    if(snake.WandKontrolle()!=-1){
+    if(snake.WandKontrolle()!=-1 || snake.SnakeKontrolle()!=-1){
             GameOver();
     }
             snake.draw();

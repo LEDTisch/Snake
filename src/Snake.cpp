@@ -35,7 +35,7 @@ snake[i][1]=-1;
 }
 for(int i=0;i<length+1;i++){
 snake[i][0]=xpos;
-snake[i][1]=ypos;
+snake[i][1]=ypos+i;
 }
 
 }
@@ -107,5 +107,13 @@ if(snake[0][1]<0){//unten kollision
 }
 
 int Snake::SnakeKontrolle(){
-return -1;
+    int k=-1;
+    for(int i=1;i<length;i++){
+        if(snake[0][0]==snake[i][0] && snake[0][1]==snake[i][1]){
+            return i;
+        }else{
+            k=-1;
+        }
+    }
+    return k;
 }
