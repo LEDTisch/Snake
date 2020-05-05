@@ -31,19 +31,19 @@ if(bb[0]=='h'){
 
 if(bb[0]=='s'){
 blue=bb[1];
-if(blue=='4'){//drehen
+if(blue=='4' && snake.direction!=3){//drehen
 snake.direction=2;
 }
 
-if(blue=='2'){//rechts
+if(blue=='2' && snake.direction!=1){//rechts
 snake.direction=0;
 }
 
-if(blue=='0'){//links
+if(blue=='0' && snake.direction!=0){//links
  snake.direction=1;
 }
 
-if(blue=='7'){//runter
+if(blue=='7' && snake.direction!=2){//runter
 snake.direction=3;
 }
 
