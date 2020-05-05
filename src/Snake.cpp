@@ -14,12 +14,11 @@ void Snake::init(int _pin){
 
 
 
-void Snake::draw(){
+void Snake::draw(long verlauf){
     for(int l=0;l<this->length;l++){
-        ledtisch.setcolor(255-l*(255/length),l*(255/length),0);
+        ledtisch.setcolor(verlauf,verlauf,0);
         ledtisch.drawkoordinatensystem(this->snake[l][0],this->snake[l][1]);
     }
-
     ledtisch.show();
 }
 
