@@ -70,14 +70,14 @@ long takt=millis();
 long verlauf=0;
 void loop() {
 if(millis()>takt){
-        if(schritt>50){
+        if(schritt>255){
     snake.move();
     if(snake.WandKontrolle()!=-1 || snake.SnakeKontrolle()!=-1){
             GameOver();
     }
     schritt=0;
 }
-            snake.draw(verlauf);
+            snake.draw(schritt);
 
 
         if(verlauf>=254){
@@ -85,7 +85,7 @@ if(millis()>takt){
         }
         schritt++;
         verlauf++;
-    takt=millis()+10;
+    takt=millis()+0;
 }
 
         steuerung();
