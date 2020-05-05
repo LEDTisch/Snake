@@ -57,10 +57,22 @@ if(blue=='1'){//neuesspiel
    }
 }
 
+
+
+void GameOver(){
+        snake.ledtisch.clear();
+snake.createSnake(5,7);
+
+}
+
+
 long takt=millis();
 void loop() {
 if(millis()>takt){
     snake.move();
+    if(snake.WandKontrolle()!=-1){
+            GameOver();
+    }
             snake.draw();
 
     takt=millis()+1000;

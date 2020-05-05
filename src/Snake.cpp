@@ -107,5 +107,5 @@ if(snake[0][1]<0){//unten kollision
 }
 
 int Snake::SnakeKontrolle(){
-
+return -1;
 }
