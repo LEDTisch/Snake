@@ -1,5 +1,7 @@
 #include "Arduino.h"
 
+#ifndef AIRCRAFT_H
+#define AIRCRAFT_H
 
 
 #include <Adafruit_NeoPixel.h>
@@ -44,3 +46,5 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ80
     
     
 };
+
+#endif
