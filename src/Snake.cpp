@@ -88,3 +88,24 @@ snake[0][1] +=1;
 
 
 }
+
+int Snake::WandKontrolle(){
+if(snake[0][0]>9){//rechts kollision
+    return 1;
+}else
+if(snake[0][0]<0){//links kollision
+    return 3;
+}else
+if(snake[0][1]>14){//oben kollision
+    return 0;
+}else
+if(snake[0][1]<0){//unten kollision
+    return 2;
+}else{
+    return -1;
+}
+}
+
+int Snake::SnakeKontrolle(){
+
+}

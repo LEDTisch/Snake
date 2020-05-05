@@ -30,6 +30,18 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
     void createSnake(int x,int y);
     void move();
     void addPixel();
-    
+    int WandKontrolle();  
+    /*
+        -1 - keine wandkollision
+         0 - oben
+         1 - rechts
+         2 - unten
+         3 - links 
+    */  
+   int SnakeKontrolle();
+   /*
+        -1 - keine Snake kollision
+        bei kollision gibt es die position in der Snake wo die kollision ist zurück
+   */
 };
 
