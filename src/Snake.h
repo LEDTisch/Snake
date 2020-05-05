@@ -1,7 +1,8 @@
 #include <Arduino.h>
 
-
 #include "Var.h"
+
+
 class Snake{
     private:
         int length=6;
