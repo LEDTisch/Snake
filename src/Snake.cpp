@@ -121,3 +121,34 @@ int Snake::SnakeKontrolle(){
     }
     return k;
 }
+
+void Snake::createRandomFood(int anzahl){
+for(int i=0;i<anzahl;i++){
+
+    boolean u=false;
+    int randomx;
+    int randomy;
+while(!u){
+    randomx=random(0, 10);
+    randomy=random(0,15);
+    for(int j=0;j<foodanzahl;j++){
+        if(food[j][0]!=randomx && food[j][1]!=randomy){
+            u=true;
+        }
+    }
+    if(foodanzahl==0){
+        u=true;
+    }
+}
+
+    food[foodanzahl][0]=randomx;
+    food[foodanzahl][1]=randomy;
+    foodanzahl++;
+}
+}
+void Snake::drawFood(){
+    for(int i=0;i<foodanzahl;i++){
+        ledtisch.drawkoordinatensystem(food[i][0],food[i][1],0xff0000);
+    }
+    ledtisch.show();
+}

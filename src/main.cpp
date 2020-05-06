@@ -6,11 +6,15 @@ Snake snake=Snake();
 char blue;
 
 void setup() {
+        randomSeed(analogRead(0));
       Serial1.begin(9600);
 
     Serial.begin(9600);
 snake.init(10);
 snake.createSnake(5,7);
+
+    snake.createRandomFood(10);
+
 
 }
 
@@ -80,6 +84,7 @@ if(millis()>takt){
     schritt=0;
 }
             snake.draw(schritt,u);
+            snake.drawFood();
 
 
         if(verlauf>=254){

@@ -9,6 +9,9 @@ class Snake{
         //int snake[10][15][2];
         int snake[15*10][2];
 
+        int food[10][2];
+        int foodanzahl=0;
+
         void moveSnake();
 
     
@@ -43,5 +46,9 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
         -1 - keine Snake kollision
         bei kollision gibt es die position in der Snake wo die kollision ist zurück
    */
+  void createRandomFood(int anzahl);
+  void drawFood();
+
+
 };
 
