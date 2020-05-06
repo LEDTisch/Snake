@@ -61,6 +61,7 @@ if(blue=='1'){//neuesspiel
 
 void GameOver(){
         snake.ledtisch.clear();
+        snake.direction=0;
 snake.createSnake(5,7);
 
 }
