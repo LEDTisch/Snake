@@ -133,11 +133,19 @@ while(!u){
     randomy=random(0,15);
     for(int j=0;j<foodanzahl;j++){
         if(food[j][0]!=randomx && food[j][1]!=randomy){
-            u=true;
+            for(int k=0;k<length;k++){
+                if(randomx != snake[k][0] && randomy != snake[k][1]){
+                    u=true;
+                }
+            }
         }
     }
     if(foodanzahl==0){
-        u=true;
+                   for(int k=0;k<length;k++){
+                if(randomx != snake[k][0] && randomy != snake[k][1]){
+                    u=true;
+                }
+            }
     }
 }
 
