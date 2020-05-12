@@ -34,6 +34,7 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
     void move();
     void addPixel();
     int WandKontrolle();  
+    void clearFood();
     /*
         -1 - keine wandkollision
          0 - oben
@@ -48,6 +49,8 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
    */
   void createRandomFood(int anzahl);
   void drawFood();
+  int foodCheck();
+  void deleteFood(int stelle);
 
 
 };

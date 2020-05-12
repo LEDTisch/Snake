@@ -13,7 +13,7 @@ void setup() {
 snake.init(10);
 snake.createSnake(5,7);
 
-    snake.createRandomFood(10);
+    snake.createRandomFood(1);
 
 
 }
@@ -64,8 +64,10 @@ if(blue=='1'){//neuesspiel
 
 
 void GameOver(){
+        snake.clearFood();
         snake.ledtisch.clear();
         snake.direction=0;
+        snake.createRandomFood(1);
 snake.createSnake(5,7);
 
 }
@@ -73,7 +75,7 @@ snake.createSnake(5,7);
 long schritt=0;
 long takt=millis();
 long verlauf=0;
-int u=5;
+int u=10;
 void loop() {
 if(millis()>takt){
         if(schritt>255/u){
@@ -96,5 +98,7 @@ if(millis()>takt){
 }
 
         steuerung();
-
+if(snake.foodCheck()!=-1){
+        snake.deleteFood(snake.foodCheck());
+}
 }

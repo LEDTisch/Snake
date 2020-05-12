@@ -160,3 +160,30 @@ void Snake::drawFood(){
     }
     ledtisch.show();
 }
+
+void Snake::clearFood(){
+    for(int i=0;i<foodanzahl;i++){
+        food[i][0]=-1;
+        food[i][1]=-1;
+    }
+    foodanzahl=0;
+}
+int Snake::foodCheck(){
+for(int i=0;i<foodanzahl;i++){
+if(snake[0][0] == food[i][0] && snake[0][1] == food[i][1]){
+    return i;
+}else{
+    return -1;
+}
+}    
+}
+
+void Snake::deleteFood(int stelle){
+    for(int i=stelle;i<foodanzahl;i++){
+        food[i][0]=food[i+1][0];
+        food[i][1]=food[i+1][1];
+        Serial.println(foodanzahl);
+
+    }
+    foodanzahl-=1;
+}
