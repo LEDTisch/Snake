@@ -68,6 +68,7 @@ void GameOver(){
         snake.ledtisch.clear();
         snake.direction=0;
         snake.createRandomFood(1);
+        snake.setLength(2);
 snake.createSnake(5,7);
 
 }
@@ -98,7 +99,14 @@ if(millis()>takt){
 }
 
         steuerung();
+
+
 if(snake.foodCheck()!=-1){
+        //Serial.println("fooddelete: "+snake.foodCheck());
+        Serial.println("fooddelete");
         snake.deleteFood(snake.foodCheck());
+        snake.createRandomFood(1);
+        snake.addPixel();
+        
 }
 }

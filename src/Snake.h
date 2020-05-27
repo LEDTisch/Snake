@@ -3,7 +3,7 @@
 
 class Snake{
     private:
-        int length=6;
+        int length=2;
         int arraySizeX=10;
         int arraySizeY=15;
         //int snake[10][15][2];
@@ -51,6 +51,8 @@ LEDTisch ledtisch=LEDTisch(10,15,1);
   void drawFood();
   int foodCheck();
   void deleteFood(int stelle);
+  void setLength(int length);
+  int getLength();
 
 
 };

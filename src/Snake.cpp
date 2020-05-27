@@ -44,7 +44,7 @@ snake[i][1]=ypos+i;
 
 }
 void Snake::addPixel(){
-   // length=length+1;
+    length=length+1;
 
 }
 
@@ -186,4 +186,11 @@ void Snake::deleteFood(int stelle){
 
     }
     foodanzahl-=1;
+}
+
+void Snake::setLength(int length){
+this->length=length;
+}
+int Snake::getLength(){
+    return length;
 }
