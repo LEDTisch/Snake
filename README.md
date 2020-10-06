@@ -1,6 +1,8 @@
 # Snake
 Das Neopixel Snake
 
+Auf einem 10x15 Pixel LED Tisch
+
     Directions:
         0 - rechts
         1 - links
